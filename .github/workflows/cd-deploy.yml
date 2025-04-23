@@ -1,0 +1,26 @@
+name: Deploy Application
+
+on:
+  workflow_run:
+    workflows:
+      - Create Release
+    types:
+      - completed
+    branches:
+      - main
+
+jobs:
+  dev:
+    name: Development
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/tpl-deploy.yml
+    with:
+      environment: development
+
+  prod:
+    name: Production
+    needs:
+      - dev
+    uses: ./.github/workflows/tpl-deploy.yml
+    with:
+      environment: production

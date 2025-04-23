@@ -1,0 +1,16 @@
+code:
+  - changed-files:
+      - any-glob-to-any-file:
+        - **/*.go
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+        - **/*.md
+        - docs/*
+
+feature:
+ - head-branch: ['^feature', 'feature']
+
+release:
+ - base-branch: 'main'
