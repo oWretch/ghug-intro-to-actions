@@ -4,6 +4,9 @@ on:
   pull_request_target:
   issues:
 
+# Declare default permissions as read only.
+permissions: read-all
+
 jobs:
   greeting:
     runs-on: ubuntu-latest

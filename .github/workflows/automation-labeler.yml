@@ -3,6 +3,9 @@ name: Labeler
 on:
   pull_request_target:
 
+# Declare default permissions as read only.
+permissions: read-all
+
 jobs:
   label:
     runs-on: ubuntu-latest
