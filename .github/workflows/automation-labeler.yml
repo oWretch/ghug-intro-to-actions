@@ -2,6 +2,7 @@ name: Labeler
 
 on:
   pull_request_target:
+  issues:
 
 # Declare default permissions as read only.
 permissions: read-all
@@ -11,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      issues: write
       pull-requests: write
 
     steps:
