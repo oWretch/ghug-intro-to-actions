@@ -11,7 +11,7 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: actions/first-interaction@v1
+      - uses: actions/first-interaction@d94ed8e502bc16de558688b9dd9a26261ae78a66 # v1.3.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: |
